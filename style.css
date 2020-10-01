@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+/*
+Reset
+============================================
+*/
+*, html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+button {
+    text-transform: none;
+    overflow: visible;
+    cursor: pointer;
+}
+
+/*
+Typography
+============================================
+*/
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: #333;
+}
+
+@media only screen and (min-width: 1600px) {
+    body {
+        font-size: 1.2rem;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ddb4a2;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #ddb4a2;
+    margin-bottom: 2rem;
+}
+h2 span {
+    padding-left: 30px;
+}
+h3 {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 100;
+}
+.navbar-brand {
+    font-family: 'Big Shoulders Display';
+    font-size: 2rem;
+}
+
+.hr {
+    border-bottom: 1px solid #ddb4a2;
+    display: block;
+    width: 30px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.services-heading {
+        text-align: center;
+        color: #ddb4a2;
+        font-size: 25px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.service-item p {
+    text-align: center;
+}
+
+.service-item img {
+    border: 4px solid white;
+    max-width: 200px;
+}
+
+a {
+    transition:
+        color 0.15s ease-in-out;
+}
+a:hover, a:focus, a:active {
+    color: #a57f6e;
+    text-decoration: none;
+    outline: 0;
+}
+
+.btn {
+    margin-top: 2rem;
+    background: #ddb4a2;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+}
+.btn:hover, .btn:focus, .btn:active {
+    background-color: #A57F6E;
+    color: white;
+    text-decoration: none;
+    outline: 0;
+}
+
+.c-white {
+    color: white;
+}
+
+.price-mainheading {
+    color: #ddb4a2;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.price-heading {
+    color: #a2cbdd;
+}
+
+.description {
+    font-size: 0.9rem;
+    width: 80%;
+    padding-top: 13px;
+    margin-bottom: 27px;
+}
+
+.price-item {
+    position: absolute;
+    right: 15px;
+    color: #333;
+    display: inline;
+}
+/*
+Layout
+============================================
+*/
+section {
+    padding: 5em 0;
+
+}
+
+section:focus {
+    outline: none;
+}
+.service-item {
+    margin-bottom: 30px;
+    margin-top: 13px;
+}
+
+/*
+Modules
+============================================
+*/
+/*  navigation */
+nav {
+    background: black;
+}
+
+nav a {
+    color: white;
+    transition:
+        color 0.15s ease-in-out;
+}
+
+nav .btn {
+    margin: 1rem;
+}
+.navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active {
+    color: white;
+    cursor: default;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding: 0 1.5rem;
+    }
+}
+
+/*
+Project specifics
+============================================
+*/
+/*  intro */
+#intro {
+    height: 100vh;
+    min-height: 590px;
+    background-image: url("images/intro_l.jpg");
+    background-image:
+        linear-gradient(to right,
+        black, rgba(0, 0, 0, 0.6)),
+        url("images/intro_xs.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#intro .container {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    color: white;
+}
+
+.c-backgroung {
+    background-image:
+        linear-gradient(to right,
+        black, rgba(0, 0, 0, 0.6));
+}
+
+/* contact */
+address {
+    color: white;
+    font-size: 1.5rem;
+}
+
+address p {
+    padding-bottom: 2rem;
+}
+
+address a {
+    position: relative;
+    color: inherit;
+    z-index: 1;
+}
+
+address i {
+    width: 30px;
+}
+
+address a:after {
+    height: 1px;
+    content: '';
+    width: calc(100% - 34px);
+    background: #ddb4a2;
+    position: absolute;
+    left: 34px;
+    bottom: 2px;
+    z-index: -1;
+}
+
+a:hover:after, a:focus:after, a:active:after  {
+    background: #a57f6e;
+}
+.fa-mobile {
+    padding-right: 4px;
+}
+
+/* PRINT CSS */
+/* ============================================== */
+@media print {
+    header, footer {
+        display: none;
+    }
+
+    * {
+        color: black !important;
+    }
+
+    /* .d-print:after {
+        content: "Šetřme naši přírodu - nastavení neumožní přímo z prohlížeče vytisknout více než kontaktní údaje.";
+    } */
+}
