@@ -1,10 +1,22 @@
+$(document).ready(function() {
+
 $(window).scroll(function() {
  if ($(document).scrollTop() > 80) {
    $('nav').addClass('shrink');
- } else {
+} else if ( ($('nav').height() < 100) && ($(document).scrollTop() < 80)) {
    $('nav').removeClass('shrink');
  }
 });
+
+$(".navbar-toggler").click(function(){
+    if ($('nav').height() < 100) {
+        $('nav').addClass('shrink');
+    } else if(
+    ($('nav').height() > 100) && ($(document).scrollTop() < 80)) {
+        $('nav').removeClass('shrink');
+    }
+});
+
 
 var scroll = new SmoothScroll('a[href*="#"]');
 
@@ -17,4 +29,6 @@ $(window).scroll(function() {
       $(this).addClass("scale-up-center");
     }
   });
+});
+
 });

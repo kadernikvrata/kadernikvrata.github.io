@@ -192,23 +192,48 @@ nav .btn {
     height: 49px;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    height: 37px;
+.navbar-toggler span {
+    display: block;
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
 }
 
-.navbar-toggler>.closer, .navbar-toggler.collapsed>.closer, .navbar-toggler[aria-expanded='false'] .closer, .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
-    display: none;
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
 }
 
-.navbar-toggler[aria-expanded='true'] .closer {
-    display: inline;
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
 }
 
-.navbar-toggler>.closer {
-    color: white;
-    padding: 9px;
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
 }
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
 
 .shrink {
     background-image: linear-gradient(15deg, #ddb4a2 0%, #a2cbdd 100%);
@@ -230,16 +255,12 @@ nav.shrink a {
     color: #333;
 }
 
-.shrink .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51,51,51, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
 .shrink .navbar-toggler {
-    border-color: rgb(51, 51, 51);
+    border-color: #333;
 }
 
-.shrink .navbar-toggler>.closer {
-    color: #333;
+.shrink .navbar-toggler span {
+    background-color: #333;
 }
 
 @media only screen and (min-width: 992px) {
@@ -300,6 +321,7 @@ nav.shrink a {
         width: 80%;
     }
 }
+
 
 /* images animation */
 .anim {
@@ -431,13 +453,20 @@ nav.shrink a {
     display: inline;
 }
 
+.note {
+    font-size: 0.9rem;
+    font-weight: 100;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
 /* contact */
 #kontakt {
-    background-image: url("images/backg.jpg");
+    background-image: url("images/framesi2.jpg");
     background-image:
         linear-gradient(to left,
         black, rgba(0, 0, 0, 0.6)),
-        url("images/backg.jpg");
+        url("images/framesi2.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
