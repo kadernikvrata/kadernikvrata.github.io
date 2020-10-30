@@ -3,16 +3,16 @@ $(document).ready(function() {
 $(window).scroll(function() {
  if ($(document).scrollTop() > 80) {
    $('nav').addClass('shrink');
-} else if ( ($('nav').height() < 100) && ($(document).scrollTop() < 80)) {
+} else if ( ($('nav').height() < 150) && ($(document).scrollTop() < 80)) {
    $('nav').removeClass('shrink');
  }
 });
 
 $(".navbar-toggler").click(function(){
-    if ($('nav').height() < 100) {
+    if ($('nav').height() < 150) {
         $('nav').addClass('shrink');
     } else if(
-    ($('nav').height() > 100) && ($(document).scrollTop() < 80)) {
+    ($('nav').height() > 150) && ($(document).scrollTop() < 80)) {
         $('nav').removeClass('shrink');
     }
 });

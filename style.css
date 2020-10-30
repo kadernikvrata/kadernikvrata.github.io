@@ -166,19 +166,20 @@ nav a {
     transition:
         color 0.15s ease-in-out;
 }
-.navbar-brand {
-    font-family: 'Big Shoulders Display', serif;
-    font-size: 2rem;
+
+svg {
     transition: 0.4s;
+}
+
+.logo {
+    fill: white;
+    stroke:white;
+    stroke-width:0.2mm;
 }
 
 nav .btn {
     margin: 1rem;
     transition: 0.4s;
-}
-
-.navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active {
-    color: white;
 }
 
 @media only screen and (min-width: 992px) {
@@ -247,12 +248,21 @@ nav.shrink a {
     color: #a57f6e;
 }
 
-.shrink .navbar-brand {
-    font-size: 1.5rem;
+.shrink .btn {
+    color: white;
 }
 
-.shrink .navbar-brand:hover {
-    color: #333;
+.shrink .btn:hover {
+    color: white;
+}
+
+.shrink svg {
+    padding: 4px 0;
+}
+
+.shrink .logo {
+    fill: #333;
+    stroke: #333;
 }
 
 .shrink .navbar-toggler {
@@ -362,14 +372,50 @@ nav.shrink a {
 #intro {
     height: 100vh;
     min-height: 590px;
-    background-image: url("images/backg.jpg");
+    background-image: url("images/intro_m.jpg");
     background-image:
         linear-gradient(to right,
         black, rgba(0, 0, 0, 0.6)),
-        url("images/backg.jpg");
+        url("images/intro_xs.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 600px) {
+    #intro {
+        background-image:
+            linear-gradient(to right,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/intro_sm.jpg");
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #intro {
+        background-image:
+            linear-gradient(to right,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/intro_m.jpg");
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #intro {
+        background-image:
+            linear-gradient(to right,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/intro_l.jpg");
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    #intro {
+        background-image:
+            linear-gradient(to right,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/intro_xl.jpg");
+    }
 }
 
 #intro .container {
@@ -462,14 +508,50 @@ nav.shrink a {
 
 /* contact */
 #kontakt {
-    background-image: url("images/framesi2.jpg");
+    background-image: url("images/backgr_m.jpg");
     background-image:
         linear-gradient(to left,
         black, rgba(0, 0, 0, 0.6)),
-        url("images/framesi2.jpg");
+        url("images/backgr_xs.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 600px) {
+    #kontakt {
+        background-image:
+            linear-gradient(to left,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/backgr_sm.jpg");
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #kontakt {
+        background-image:
+            linear-gradient(to left,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/backgr_m.jpg");
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #kontakt {
+        background-image:
+            linear-gradient(to left,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/backgr_l.jpg");
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    #kontakt {
+        background-image:
+            linear-gradient(to left,
+            black, rgba(0, 0, 0, 0.6)),
+            url("images/backgr_xl.jpg");
+    }
 }
 
 address {
